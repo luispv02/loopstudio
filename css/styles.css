@@ -1,0 +1,535 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --darkgray: hsl(0, 0%, 55%);
+  --VeryDarkGray: hsl(0, 0%, 41%);
+}
+
+body.scroll{
+    overflow: hidden;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/** HEADER - RESPONSIVE **/
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/mobile/image-hero-mobile.jpg);
+    background-size:cover;
+}
+
+header .content-header{
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 25px;
+}
+
+header .content-header .header-flex{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+header .content-header .header-flex .logo{
+    z-index: 100;
+}
+
+header .content-header .header-flex .logo h1{
+    color: white;
+    font-size: 27px;
+    font-weight: 500;
+    
+}
+
+header .content-header .header-flex .main ul{
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100vh;
+    left: -100%;
+    top: 0;
+    padding-left: 28px;
+    padding-top: 170px;
+    transition: all 600ms;
+    
+    
+    display: flex;
+    flex-direction: column;
+
+}
+
+header .content-header .header-flex .main ul.show{
+    left: 0;
+}
+
+header .content-header .header-flex .main ul li{
+    margin: 10px 0;
+}
+
+header .content-header .header-flex .main ul li a{
+    color: white;
+    font-size: 25px;
+    font-weight: lighter;
+    
+}
+
+header .content-header .header-flex .hamburger{
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+}
+
+header .content-header .text-hero{
+    color: white;
+    margin-top: 136px;
+    border: 2px solid white;
+    display: inline-block;
+    width: 100%;
+}
+
+header .content-header .text-hero h1{
+    font-weight: lighter;
+    font-size: 45px;
+    padding: 20px;
+    line-height: 40px;
+}
+
+/** SECTION - ONE **/
+section{
+    width: 85%;
+    margin: 70px auto 0 auto;
+}
+
+section .content-section .image img{
+    width: 100%;
+}
+
+section .content-section .text-section-one{
+    text-align: center;
+    margin-top: 40px;
+}
+
+section .content-section .text-section-one h2{
+    font-size: 35px;
+    font-weight: lighter;
+    line-height: 38px;
+    margin-bottom: 25px;
+}
+
+section .content-section .text-section-one p{
+    color: var(--darkgray);
+    font-weight: 600;
+}
+
+/** SECTION-TWO **/
+
+.section-two .content-section h2{
+    text-align: center;
+    font-weight: 200;
+    font-size: 35px;
+    margin-bottom: 35px;
+}
+
+
+.section-two .content-section .images-gallery .imagen{
+    position: relative;
+    height: 130px;
+    margin-bottom: 25px;
+}
+
+   
+.section-two .content-section .images-gallery .imagen:hover::before{
+    background: rgba(159, 159, 159, 0.55);
+    color: black;
+}
+
+
+.section-two .content-section .images-gallery .imagen::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+background: rgb(0,0,0);
+background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+    position: absolute;
+}
+
+.section-two .content-section .images-gallery .imagen .show{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.section-two .content-section .images-gallery .imagen .hide{
+    display: none;
+}
+
+
+.section-two .content-section .images-gallery .imagen .text-imagen{
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+
+}
+
+
+
+.section-two .content-section .images-gallery .imagen .text-imagen p{
+    color: white;
+    font-size: 25px;
+    font-weight: lighter;
+    line-height: 25px;
+}
+
+.section-two .content-section .button{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-two .content-section .button button{
+    padding: 10px 40px;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    outline: none;
+    font-weight: 600;
+}
+
+/** FOOTER **/
+footer{
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+
+footer .content-footer .footer-logo{
+    padding-top: 40px;
+
+}
+
+footer .content-footer .main-footer{
+    padding: 40px 0;
+}
+
+footer .content-footer .main-footer ul li{
+    margin-bottom: 20px;
+}
+
+footer .content-footer .main-footer ul li a{
+    color: white;
+    font-size: 16px;
+    
+}
+
+footer .content-footer .icons-footer img{
+    margin: 0 5px;
+    width: 25px;
+}
+
+footer .content-footer .copyright{
+    padding: 20px 0 60px 0;
+}
+
+/** MEDIA QUERIS **/
+/** HEADER **/
+
+@media (min-width:600px){
+    header{
+        width: 100%;
+        height: 100vh;
+        background-image: url(../img/desktop/image-hero.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .section-two .content-section .images-gallery .imagen{
+        height: 170px;
+    }
+}
+
+@media (min-width:820px){
+    header .content-header .header-flex .logo h1{
+        font-size: 35px;
+    }
+    
+    header .content-header .header-flex .main  ul{
+        position: static;
+        background: none;
+        height: 100%;
+        flex-direction: row;
+        padding-top: 0;
+        align-items: center;
+        padding-left: 0;
+    }
+    
+    header .content-header .header-flex .main  ul li a{
+        font-size: 17px;
+        margin-left: 20px;
+    }
+    
+    header .content-header .hamburger{
+        display: none;
+    }
+    
+    header .content-header .text-hero{
+        width: 50%;
+    }
+    
+    .section-two .content-section .images-gallery .imagen{
+        height: 200px;
+    }
+}
+
+@media (min-width:1024px){
+    header .content-header .header-flex .main ul{
+
+    }
+    
+    header .content-header .header-flex .main ul li a:hover{
+        border-bottom: 2px solid white;
+        padding-bottom: 8px;
+    }
+    
+
+    header .content-header .header-flex{
+        margin-top: 25px;
+    }
+    
+    header .content-header .header-flex .logo h1{
+        font-size: 40px;
+    }
+    
+    header .content-header .header-flex .main ul li{
+        margin-left: 20px;
+    }
+    
+    header .content-header .header-flex .main ul li a{
+        font-size: 16px;
+    }
+    
+    header .content-header .text-hero{
+        width: 50%;
+        margin-top: 80px;
+    }
+    
+    header .content-header .text-hero h1{
+        font-size: 65px;
+        line-height: 60px;
+        padding: 40px 110px 40px 40px;
+    }
+    
+    
+    header .content-header .text-hero br{
+        display: none;
+    }
+    
+    
+    /** SECTION-ONE **/
+    .section-one .content-section{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 50px;
+    }
+    
+    .section-one .content-section .image{
+       width: 55%;
+    }
+
+    .section-one .content-section .text-section-one{
+        width: 54%;
+        height: auto;
+        padding: 75px;
+        text-align: left;
+        position: absolute;
+        background: white;
+        right:35px;
+        margin-top: 160px;
+        
+    }
+    
+    .section-one .content-section .text-section-one h2{
+        width: 65%;
+    }
+    
+    .section-one .content-section .text-section-one p{
+        font-weight: 600;
+    }
+    
+    /** SECTION - TWO **/
+    .section-two{
+        margin-top: 150px;    
+    }
+    
+    .section-two .content-section {
+
+        position: relative;
+        width: 100%;
+        margin-bottom: 150px;
+    }
+    
+    .section-two .content-section h2{
+        text-align: left;
+        font-size: 45px;
+    }
+    
+    .section-two .content-section .button{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 7px;
+    }
+    
+    .section-two .content-section .button button{
+        padding: 15px 65px;
+    }
+    
+    .section-two .content-section .button button:hover{
+        background: black;
+        color: white;
+    }
+    
+    .section-two .content-section .images-gallery{
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .section-two .content-section .images-gallery .imagen{
+        height: auto;
+        width: 23%;
+    }
+ 
+    .section-two .content-section .images-gallery .imagen::before{
+        width: 100%;
+        height: 100%;
+        content: '';
+        background: rgb(0,0,0);
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0.79) 0%, rgba(255,255,255,0) 100%);
+        position: absolute;
+
+    }
+      
+    
+    .section-two .content-section .images-gallery .imagen .hide{
+        width: 100%;
+        display: block;
+    }
+    
+    .section-two .content-section .images-gallery .imagen .show{
+        display: none;
+    }
+
+    .section-two .content-section .images-gallery .imagen .text-imagen{
+        margin-left: 19px;
+        margin-bottom: 17px;
+    }
+    
+    .section-two .content-section .images-gallery .imagen .text-imagen p{
+        font-size: 30px;
+        line-height: 32px;
+        letter-spacing: 3px;
+    }
+    
+    /** FOOTER **/
+    footer{
+        
+    }
+    
+    footer .content-footer{
+        width: 85%;
+        margin: 0 auto;
+        padding: 30px 0;
+        
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    footer .content-footer .flex-left{
+        
+    }
+    
+    footer .content-footer .flex-left .footer-logo{
+        padding: 0;
+        text-align: left;
+    }
+    
+    footer .content-footer .flex-left .main-footer{
+        padding: 40px 0 0 0;
+    }
+    
+    footer .content-footer .flex-left .main-footer ul{
+        display: flex;
+    }
+    
+    footer .content-footer .flex-left .main-footer ul li{
+        margin-right: 20px;
+    }
+    
+    footer .content-footer .flex-left .main-footer ul li a:hover{
+        padding-bottom: 8px;
+        border-bottom: 2px solid white;
+    }
+    
+    footer .content-footer .flex-right{
+        position: relative;
+    }
+    
+    footer .content-footer .flex-right .icons-footer{
+        text-align: right;
+        
+    }
+    
+    footer .content-footer .flex-right .icons-footer a{
+        margin-left: 10px;
+    }
+    
+    footer .content-footer .flex-right .icons-footer a:hover{
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+    }
+    
+    footer .content-footer .flex-right .icons-footer a img{
+        margin: 0;
+
+    }
+   
+    footer .content-footer .flex-right .copyright{
+        padding: 40px 0 0 0;
+    }
+    
+    footer .content-footer .flex-right .copyright p{
+        color: var(--darkgray)
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
